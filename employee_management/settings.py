@@ -1,5 +1,8 @@
 from pathlib import Path
 from datetime import timedelta
+import os
+ALLOWED_HOSTS = ['*']
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,6 +32,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'employee_management.urls'
